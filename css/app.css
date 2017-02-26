@@ -3257,3 +3257,48 @@ fieldset[disabled] .i-checks input + i:before {
   font-weight: bold;
   color: #00aacc;
 }
+
+/* chart */
+
+.container-bp {
+    background-color: #a0dc94;
+    color: #fff;
+}
+
+.container-bs {
+    background-color: rgb(76, 201, 213);
+    color: #fff;
+}
+
+.chart {
+    min-width: 300px;
+    height: 200px;
+    margin: 10px auto;
+}
+
+.title {
+    min-width: 341px;
+    border-bottom: 1px white solid;
+}
+
+.name {
+    float: left;
+    padding: 10px 15px;
+}
+
+.icons {
+    float: right;
+    padding: 10px 15px;
+}
+
+.icons-margin {
+    margin-right: 5px;
+}
+
+.icons-sm {
+    font-size: 10px;
+}
+
+.icons-red {
+    color: #ff0000;
+}
