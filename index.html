@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/app.css" type="text/css">
 </head>
 
-<body>
-    <div style="width:768px;left:20%;top:0;position:absolute;">
+<body style="background-color: #26293A;">
+    <div class="col-xs-8 m-t-lg" style="border-right: 1px solid #fff">
         <ul class="timeline timeline-center">
             <li class="tl-header">
                 <div class="tl-header-body">
@@ -33,7 +33,7 @@
                                 </span>
                             </div>
                             <div class="media-body">
-                                <h2 href="" class="h2 text-hei">血糖测量</h2>
+                                <h2 href="" class="h2 text-white">血糖测量</h2>
                                 <h4 class="block h4 text-muted m-t-xs">要空腹测量</h4>
                             </div>
                         </article>
@@ -52,7 +52,7 @@
                                 </span>
                             </div>
                             <div class="media-body">
-                                <h2 href="" class="h2 text-hei">按时服药</h2>
+                                <h2 href="" class="h2 text-white">按时服药</h2>
                                 <h4 class="block h4 text-muted m-t-xs">请您遵医嘱</h4>
                             </div>
                         </article>
@@ -71,7 +71,7 @@
                                 </span>
                             </div>
                             <div class="media-body">
-                                <h2 href="" class="h2 text-hei">医院检查</h2>
+                                <h2 href="" class="h2 text-white">医院检查</h2>
                                 <h4 class="block h4 text-muted m-t-xs">请准时到达</h4>
                             </div>
                         </article>
@@ -90,7 +90,7 @@
                                 </span>
                             </div>
                             <div class="media-body">
-                                <h2 href="" class="h2 text-hei">护士回访</h2>
+                                <h2 href="" class="h2 text-white">护士回访</h2>
                                 <h4 class="block h4 text-muted m-t-xs">请您遵医嘱</h4>
                             </div>
                         </article>
@@ -109,7 +109,7 @@
                                 </span>
                             </div>
                             <div class="media-body">
-                                <h2 href="" class="h2 text-hei">康复训练</h2>
+                                <h2 href="" class="h2 text-white">康复训练</h2>
                                 <h4 class="block h4 text-muted m-t-xs">开始锻炼吧</h4>
                             </div>
                         </article>
@@ -128,7 +128,7 @@
                                 </span>
                             </div>
                             <div class="media-body">
-                                <h2 href="" class="h2 text-hei">按时服药</h2>
+                                <h2 href="" class="h2 text-white">按时服药</h2>
                                 <h4 class="block h4 text-muted m-t-xs">请您遵医嘱</h4>
                             </div>
                         </article>
@@ -147,7 +147,7 @@
                                 </span>
                             </div>
                             <div class="media-body">
-                                <h2 href="" class="h2 text-hei">血压测量</h2>
+                                <h2 href="" class="h2 text-white">血压测量</h2>
                                 <h4 class="block h4 text-muted m-t-xs">请饭前测量</h4>
                             </div>
                         </article>
@@ -156,6 +156,100 @@
             </li>
         </ul>
     </div>
+    <div class="col-xs-4">
+        <div class="container-bp" style="margin-top: 200px;">
+            <div class="title clearfix">
+                <div class="name">
+                    <i class="fa fa-stethoscope icons-margin"></i>Blood Pressure
+                </div>
+                <div class="icons">
+                    <i class="fa fa-circle-thin icons-margin icons-sm"></i>Normal
+                    <i class="fa fa-circle-thin icons-margin icons-sm icons-red"></i>Abnormal
+                </div>
+            </div>
+            <div id="chart-bp" class='chart'></div>
+        </div>
+        <div class="container-bs">
+            <div class="title clearfix">
+                <div class="name">
+                    <i class="fa fa-file-text-o icons-margin"></i>Blood Sugar
+                </div>
+                <div class="icons">
+                    <i class="fa fa-circle-thin icons-margin icons-sm"></i>Normal
+                    <i class="fa fa-circle-thin icons-margin icons-sm icons-red"></i>Abnormal
+                </div>
+            </div>
+            <div id="chart-bs" class='chart'></div>
+        </div>
+    </div>
+
+
+
+    <script type='text/javascript' , src='js/jquery-2.1.4.min.js'></script>
+    <script type='text/javascript' , src='js/highcharts.js'></script>
+    <script type='text/javascript' , src='js/no-data-to-display.js'></script>
+    <script type='text/javascript' , src='js/setting.js'></script>
+    <script type='text/javascript'>
+    $(function() {
+        var data = {
+            "bloodPressure": [{
+                "top": "140",
+                "bottom": "90",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "150",
+                "bottom": "100",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "130",
+                "bottom": "90",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "120",
+                "bottom": "80",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "130",
+                "bottom": "90",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }],
+            "bloodSugar": [{
+                "top": "5.1",
+                "bottom": "4.9",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "6.1",
+                "bottom": "3.9",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "5.5",
+                "bottom": "4.3",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "6.5",
+                "bottom": "5.0",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }, {
+                "top": "4.1",
+                "bottom": "3.3",
+                "inspectionDate": "2015-12-22",
+                "inspectionTime": "17:55"
+            }]
+        };
+
+        setting.makeBloodPressureChart(data.bloodPressure, "#chart-bp");
+        setting.makeBloodSugarChart(data.bloodSugar, "#chart-bs");
+    });
+    </script>
 </body>
 
 </html>
