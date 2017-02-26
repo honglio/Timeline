@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # Timeline & Chart
 A example of timeline and chart I made before.
+=======
+# Timeline
+a timeline example for desktop browser
+>>>>>>> origin/master
 
 ## Browser Support
 
